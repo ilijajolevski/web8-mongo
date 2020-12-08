@@ -1,0 +1,16 @@
+<ol class="people_list">
+  {{#each user}}
+    <li><a href="/users/{{this._id}}">{{this._id}}</a> >> username: {{this.username}},   pass: {{this.password}}</li>
+  {{/each}}
+</ol>
+
+<br><br>
+<h3> Create new user here:</h3>
+<br>
+<form name="userForm" onsubmit="validateForm()">
+  <label for="uname">Username:</label>
+  <input type="text" id="uname" name="uname">
+  <label for="pass">Password:</label>
+  <input type="text" id="pass" name="pass">
+   <input type="submit" value="Create User">
+</form>
