@@ -14,3 +14,7 @@
 
 се гаси со '''docker-compose down'''
 
+сите измени се во рутете users
+додадени се и hбс (handlebars) темплејт страници
+јаваскрипт кодот од вебстраните е во /public/javascripts/client.js
+
