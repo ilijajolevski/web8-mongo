@@ -48,6 +48,27 @@ router.get('/', function(req, res, next) {
 
 router.post('/', jsonParser, insertUser);
 
+router.delete('/:idto', function(req, res, next) {
+  MongoClient.connect('mongodb://localhost:27017/WEB', function (err, client) {
+    if (err) throw err
+      const kveri = {
+        _id:ObjectID(req.params.idto)
+      };
+      console.log(req.params.idto)
+      var db = client.db('WEB')
+      db.collection('Users').deleteOne(kveri, function(err, result) {
+      if (err) throw err
+      
+       console.log(result.deletedCount);
+       if (result.deletedCount != 0){
+
+       }
+        //res.send(result);
+        //res.render('oneuser', { user:result });
+    })
+  })
+
+});
 
 router.get('/:idto', function(req, res, next) {
   MongoClient.connect('mongodb://localhost:27017/WEB', function (err, client) {

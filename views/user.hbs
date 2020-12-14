@@ -1,6 +1,6 @@
 <ol class="people_list">
   {{#each user}}
-    <li><a href="/users/{{this._id}}">{{this._id}}</a> >> username: {{this.username}},   pass: {{this.password}}</li>
+    <li><a href="/users/{{this._id}}">{{this._id}}</a> >> username: {{this.username}},   pass: {{this.password}} <a href="/deleteuser/{{this._id}}">(X)</a></li>
   {{/each}}
 </ol>
 
